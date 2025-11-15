@@ -12,6 +12,7 @@ export default function Header({ onNavigate }) {
           <button onClick={() => onNavigate('home')} className="hover:text-pokemon-electric transition">Accueil</button>
           <button onClick={() => onNavigate('pokedex')} className="hover:text-pokemon-electric transition">Pokédex</button>
           <button onClick={() => onNavigate('articles')} className="hover:text-pokemon-electric transition">Articles</button>
+          <button onClick={() => onNavigate('trainers')} className="hover:text-pokemon-electric transition">Dresseurs</button>
           <button onClick={() => onNavigate('replays')} className="hover:text-pokemon-electric transition">Replays</button>
         </nav>
       </div>
