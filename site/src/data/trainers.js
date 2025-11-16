@@ -54,7 +54,7 @@ qui mêlent aide humanitaire et recherche de Pokémon rares.`,
     title: 'Défi Nomade',
     age: 20,
     hometown: 'Bourg Palette',
-    image: 'https://assets.pokemon.com/assets/cms2/img/watch-pokemon-tv/seasons/season25/season25_ep01_ss04.jpg',
+    image: '/images/sacha-pikachu.png',
     dream: 'Visiter toutes les ligues et consolider un réseau mondial de dresseurs',
     signaturePokemon: ['Pikachu', 'Dracaufeu', 'Greninja'],
     signaturePokemonDetails: [
@@ -91,7 +91,7 @@ Il sert de grand frère à Naulynn, partage ses carnets de badges et a coordonn�
     title: 'Gardienne des mers',
     age: 19,
     hometown: 'Azuria',
-    image: 'https://assets.pokemon.com/assets/cms2/img/watch-pokemon-tv/seasons/season01/season01_ep07_ss03.jpg',
+    image: '/images/ondine-psykokwak.png',
     dream: 'Moderniser les infrastructures aquatiques pour les dresseurs voyageurs',
     signaturePokemon: ['Lokhlass', 'Starmie', 'Psykokwak'],
     signaturePokemonDetails: [
@@ -128,7 +128,7 @@ Elle conçoit des protocoles pour les transports médicaux par voie d'eau et a d
     title: 'Médecin itinérant',
     age: 21,
     hometown: 'Argenta',
-    image: 'https://assets.pokemon.com/assets/cms2/img/watch-pokemon-tv/seasons/season01/season01_ep05_ss01.jpg',
+    image: 'https://www.pokemon.com/static-assets/content-assets/cms2/img/characters/full/brock.png',
     dream: 'Établir des cliniques mobiles Pokémon',
     signaturePokemon: ['Onix', 'Steelix', 'Blissey'],
     signaturePokemonDetails: [
@@ -164,7 +164,7 @@ Il aide Naulynn à maintenir en forme ses partenaires durant leurs missions de s
     title: 'Scénographe des concours',
     age: 19,
     hometown: 'Bourg Croquis',
-    image: 'https://assets.pokemon.com/assets/cms2/img/watch-pokemon-tv/seasons/season17/season17_ep40_ss02.jpg',
+    image: 'https://www.pokemon.com/static-assets/content-assets/cms2/img/characters/full/serena.png',
     dream: 'Fusionner concours, musique et compétitions Pokémon',
     signaturePokemon: ['Feunnec', 'Pancham', 'Sylveon'],
     signaturePokemonDetails: [
@@ -201,7 +201,7 @@ Elle conçoit des chorégraphies qui valorisent Grodoudou et Pikachu et a dirig�
     title: 'Maîtresse de Sinnoh',
     age: 25,
     hometown: 'Celestia',
-    image: 'https://assets.pokemon.com/assets/cms2/img/video-games/_tiles/pokemon-scarlet-violet/characters/cynthia-169.png',
+    image: 'https://www.pokemon.com/static-assets/content-assets/cms2/img/characters/full/cynthia.png',
     dream: 'Transmettre la connaissance des mythes et ruines aux futurs champions',
     signaturePokemon: ['Carchacrok', 'Lucario', 'Togekiss'],
     signaturePokemonDetails: [
@@ -238,7 +238,7 @@ Elle prête ses archives et son Lucario pour entraîner Abra et Alakazam, et a f
     title: 'Champion invaincu de Galar',
     age: 23,
     hometown: 'Puralis',
-    image: 'https://assets.pokemon.com/assets/cms2/img/video-games/video-games/pokemon_sword_shield/art/leon.png',
+    image: 'https://www.pokemon.com/static-assets/content-assets/cms2/img/characters/full/leon.png',
     dream: 'Former une génération de pilotes de dragons capables d\'assurer des secours aériens',
     signaturePokemon: ['Dracaufeu', 'Dragapult', 'Dorlodon'],
     signaturePokemonDetails: [
