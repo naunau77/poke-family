@@ -118,6 +118,7 @@ export default function Trainers() {
                       src={naulynn.image}
                       alt={`Illustration de ${naulynn.name}`}
                       className="w-full h-72 object-cover"
+                      style={{ objectPosition: 'center top' }}
                       loading="lazy"
                       onError={(event) => {
                         event.currentTarget.style.display = 'none'
@@ -177,6 +178,7 @@ export default function Trainers() {
                     src={trainer.image}
                     alt={`Portrait de ${trainer.name}`}
                     className="w-full h-48 object-cover rounded-2xl mb-4"
+                    style={{ objectPosition: 'center top' }}
                     loading="lazy"
                   />
                 )}

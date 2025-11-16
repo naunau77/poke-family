@@ -128,7 +128,7 @@ Elle conçoit des protocoles pour les transports médicaux par voie d'eau et a d
     title: 'Médecin itinérant',
     age: 21,
     hometown: 'Argenta',
-    image: 'https://www.pokemon.com/static-assets/content-assets/cms2/img/characters/full/brock.png',
+    image: '/images/pierre-onix.png',
     dream: 'Établir des cliniques mobiles Pokémon',
     signaturePokemon: ['Onix', 'Steelix', 'Blissey'],
     signaturePokemonDetails: [
@@ -164,7 +164,7 @@ Il aide Naulynn à maintenir en forme ses partenaires durant leurs missions de s
     title: 'Scénographe des concours',
     age: 19,
     hometown: 'Bourg Croquis',
-    image: 'https://www.pokemon.com/static-assets/content-assets/cms2/img/characters/full/serena.png',
+    image: '/images/serena-roussil.png',
     dream: 'Fusionner concours, musique et compétitions Pokémon',
     signaturePokemon: ['Feunnec', 'Pancham', 'Sylveon'],
     signaturePokemonDetails: [
@@ -201,7 +201,7 @@ Elle conçoit des chorégraphies qui valorisent Grodoudou et Pikachu et a dirig�
     title: 'Maîtresse de Sinnoh',
     age: 25,
     hometown: 'Celestia',
-    image: 'https://www.pokemon.com/static-assets/content-assets/cms2/img/characters/full/cynthia.png',
+    image: '/images/cynthia-carchacrok.png',
     dream: 'Transmettre la connaissance des mythes et ruines aux futurs champions',
     signaturePokemon: ['Carchacrok', 'Lucario', 'Togekiss'],
     signaturePokemonDetails: [
@@ -238,7 +238,7 @@ Elle prête ses archives et son Lucario pour entraîner Abra et Alakazam, et a f
     title: 'Champion invaincu de Galar',
     age: 23,
     hometown: 'Puralis',
-    image: 'https://www.pokemon.com/static-assets/content-assets/cms2/img/characters/full/leon.png',
+    image: '/images/tarak-dracaufeu.png',
     dream: 'Former une génération de pilotes de dragons capables d\'assurer des secours aériens',
     signaturePokemon: ['Dracaufeu', 'Dragapult', 'Dorlodon'],
     signaturePokemonDetails: [
@@ -267,6 +267,44 @@ Il partage ses méthodes de planification de vols humanitaires et a supervisé l
       allies: ['Naulynn', 'Sacha', 'Cynthia'],
       rivals: ['Tarak dans certaines timelines', 'Champion Raihan'],
       mentors: ['Professeur Magnolia']
+    }
+  },
+  {
+    id: 'team-rocket',
+    name: 'Team Rocket',
+    title: 'Duo Jessie & James',
+    age: 999,
+    hometown: 'Quartier général de Kanto',
+    image: '/images/team-rocket.png',
+    dream: 'Capturer Pikachu et voler la vedette… mais aussi protéger Lognes malgré eux',
+    signaturePokemon: ['Mélofée-bot', 'Arbok', 'Smogogo'],
+    signaturePokemonDetails: [
+      { name: 'Wobbuffet', image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/202.png' },
+      { name: 'Arbok', image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/24.png' },
+      { name: 'Smogogo', image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/110.png' }
+    ],
+    biography: `Jessie, James et Miaouss poursuivent Pikachu mais finissent toujours par aider Naulynn. 
+Ils utilisent leurs gadgets absurdes pour détourner la Team Plasma 2.0, parfois par accident.`,
+    strengths: [
+      'Créativité infinie en matière de gadgets',
+      'Capacité à improviser des diversions',
+      'Résilience (ils reviennent toujours)'
+    ],
+    weaknesses: [
+      'Plans rocambolesques qui explosent',
+      'Fierté qui les pousse à annoncer leurs attaques',
+      'Budget limité pour leurs robots'
+    ],
+    quests: [
+      'Mission involontaire : bloquer un convoi Plasma avec un robot Pikachu',
+      'Diversion pendant le vol du clocher de Rosalia',
+      'Sauvetage improbable de Miaouss pris au piège de la forteresse',
+      'Protection incognito du centre Pokémon de Lognes'
+    ],
+    relations: {
+      allies: ['Miaouss', 'Naulynn (quand ça les arrange)'],
+      rivals: ['Team Plasma 2.0', 'Giovanni… parfois'],
+      mentors: ['Giovanni (officiellement)']
     }
   }
 ]
