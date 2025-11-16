@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react'
 import { ARTICLES } from '../data/articles'
 import { POKEMONS } from '../data/pokemons'
 import { REPLAYS } from '../data/replays'
@@ -9,9 +10,9 @@ const HERO_CHARACTER = '/images/naulynn-victoire.jpg'
 const HERO_SUPPORT = 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/923.png'
 
 const VIDEO_FEATURE = {
-  url: 'https://www.youtube.com/embed/3pxvptLoreQ',
-  title: 'Trailer officiel Pokémon Scarlet & Violet',
-  caption: 'Revivez l’annonce officielle de Scarlet/Violet par la chaîne Pokémon : idéal pour se replonger dans l’ambiance compétitive.'
+  url: '/video/My-name-is-Naulynn.mp4',
+  title: 'My Name Is Naulynn — Clip exclusif',
+  caption: 'Découvre le teaser officiel de Naulynn, tourné par l’équipe Pokémon Family et hébergé directement sur la plateforme.'
 }
 
 const toReplayLink = (videoUrl) => {
@@ -25,9 +26,32 @@ const toReplayLink = (videoUrl) => {
 }
 
 export default function Home({ onNavigate }) {
+  const featuredVideoRef = useRef(null)
   const featuredPokemon = [POKEMONS[3], POKEMONS[0], POKEMONS[2], POKEMONS[4], POKEMONS[1], POKEMONS[5]]
   const highlightedArticles = ARTICLES.slice(0, 3)
   const highlightedReplays = REPLAYS.slice(0, 6)
+
+  useEffect(() => {
+    const video = featuredVideoRef.current
+    if (!video) return
+
+    let timeoutId
+    const handleEnded = () => {
+      timeoutId = window.setTimeout(() => {
+        video.currentTime = 0
+        const playPromise = video.play()
+        if (playPromise?.catch) {
+          playPromise.catch(() => {})
+        }
+      }, 1000)
+    }
+
+    video.addEventListener('ended', handleEnded)
+    return () => {
+      video.removeEventListener('ended', handleEnded)
+      if (timeoutId) window.clearTimeout(timeoutId)
+    }
+  }, [])
 
   return (
     <>
@@ -83,14 +107,17 @@ export default function Home({ onNavigate }) {
           <h2 className="text-4xl font-black mb-8 text-pokemon-primary">Replay en vedette</h2>
           <div className="relative max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-white/40">
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent pointer-events-none"></div>
-            <div className="aspect-video">
-              <iframe
+            <div className="aspect-video bg-black">
+              <video
+                ref={featuredVideoRef}
                 src={VIDEO_FEATURE.url}
-                allowFullScreen
-                loading="lazy"
-                className="w-full h-full"
+                controls
+                preload="metadata"
+                className="w-full h-full object-contain bg-black"
                 title={VIDEO_FEATURE.title}
-              ></iframe>
+              >
+                Votre navigateur ne supporte pas la lecture vidéo intégrée.
+              </video>
             </div>
             <div className="absolute bottom-0 left-0 right-0 p-6 text-left text-white">
               <h3 className="text-2xl font-black">{VIDEO_FEATURE.title}</h3>
@@ -200,19 +227,36 @@ export default function Home({ onNavigate }) {
           <h2 className="text-4xl font-black mb-8">Replays commentés</h2>
           <div className="space-y-4">
             {highlightedReplays.map((replay) => (
-              <a
+              <div
                 key={replay.slug}
-                href={toReplayLink(replay.videoUrl)}
-                target="_blank"
-                rel="noreferrer"
-                className="block bg-white border-l-4 border-pokemon-primary p-6 rounded-2xl hover:shadow-lg transition w-full text-left cursor-pointer"
+                className="bg-white border-l-4 border-pokemon-primary p-6 rounded-2xl shadow-sm hover:shadow-lg transition"
               >
-                <h3 className="text-xl font-bold mb-1">{replay.title}</h3>
-                <p className="text-sm text-gray-600">
-                  {replay.date} • {replay.duration} • {replay.category}
-                </p>
-                <p className="text-xs text-gray-500 italic">{replay.platform} • Visionner</p>
-              </a>
+                <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+                  <div>
+                    <h3 className="text-xl font-bold mb-1">{replay.title}</h3>
+                    <p className="text-sm text-gray-600">
+                      {replay.date} • {replay.duration} • {replay.category}
+                    </p>
+                    <p className="text-xs text-gray-500 italic">{replay.platform}</p>
+                  </div>
+                  <div className="flex flex-wrap gap-3">
+                    <button
+                      onClick={() => onNavigate('replay-detail', replay.slug)}
+                      className="px-4 py-2 rounded-full bg-pokemon-primary text-white font-semibold hover:-translate-y-0.5 transition cursor-pointer"
+                    >
+                      Analyse complète
+                    </button>
+                    <a
+                      href={toReplayLink(replay.videoUrl)}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="px-4 py-2 rounded-full border border-gray-200 text-gray-800 font-semibold hover:bg-gray-50 transition"
+                    >
+                      Voir sur YouTube →
+                    </a>
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
           <div className="text-center mt-8">

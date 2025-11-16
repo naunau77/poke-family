@@ -110,25 +110,42 @@ export default function Trainers() {
                     </ul>
                   </div>
                 </div>
+                <div className="bg-gray-900/90 rounded-3xl border border-gray-800 overflow-hidden shadow-xl">
+                  <div className="aspect-video bg-black">
+                    <video
+                      src="/video/naulynn-victory.mp4"
+                      controls
+                      preload="metadata"
+                      className="w-full h-full object-contain bg-black"
+                      title="Naulynn Victory"
+                    >
+                      Votre navigateur ne supporte pas la lecture vidéo.
+                    </video>
+                  </div>
+                  <div className="p-4 text-white">
+                    <p className="text-sm uppercase tracking-[0.4em] text-white/60 mb-1">Archive vidéo</p>
+                    <h3 className="text-2xl font-black">Naulynn Victory</h3>
+                    <p className="text-sm text-white/70">La séquence originale qui a fait connaître Naulynn et Pikachu au réseau Lognes.</p>
+                  </div>
+                </div>
               </div>
               <div className="md:w-1/3 bg-gradient-to-b from-pokemon-primary to-pokemon-accent text-white p-8 space-y-6">
-                {naulynn.image && (
-                  <div className="rounded-3xl overflow-hidden border border-white/30 shadow-2xl">
-                    <img
-                      src={naulynn.image}
-                      alt={`Illustration de ${naulynn.name}`}
-                      className="w-full h-72 object-cover"
-                      style={{ objectPosition: 'center top' }}
-                      loading="lazy"
-                      onError={(event) => {
-                        event.currentTarget.style.display = 'none'
-                      }}
-                    />
-                    <p className="text-xs uppercase tracking-[0.3em] text-white/70 px-4 py-2 bg-black/30">
-                      Légende : Naulynn & Pikachu
-                    </p>
+                <div className="rounded-3xl overflow-hidden border border-white/30 shadow-2xl">
+                  <div className="aspect-video bg-black w-full">
+                    <video
+                      src="/video/epic-battle.mp4"
+                      controls
+                      preload="metadata"
+                      className="w-full h-full object-contain bg-black"
+                      title="Naulynn & Pikachu — Epic Battle"
+                    >
+                      Votre navigateur ne supporte pas la lecture vidéo.
+                    </video>
                   </div>
-                )}
+                  <p className="text-xs uppercase tracking-[0.3em] text-white/70 px-4 py-2 bg-black/30">
+                    Clip : Naulynn & Pikachu
+                  </p>
+                </div>
                 <div>
                   <p className="uppercase text-xs tracking-widest mb-2 text-white/70">Rêve</p>
                   <p className="text-2xl font-black">{naulynn.dream}</p>

@@ -6,14 +6,17 @@ import Pokedex from './pages/Pokedex'
 import PokemonDetail from './pages/PokemonDetail'
 import ArticleDetail from './pages/Articles'
 import ArticlesList from './pages/ArticlesList'
-import Replays from './pages/Replays'
+import ReplayDetailPage from './pages/Replays'
+import ReplaysList from './pages/ReplaysList'
 import Trainers from './pages/Trainers'
 import { ARTICLES } from './data/articles'
+import { REPLAYS } from './data/replays'
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home')
   const [selectedPokemon, setSelectedPokemon] = useState(null)
   const [selectedArticleSlug, setSelectedArticleSlug] = useState(null)
+  const [selectedReplaySlug, setSelectedReplaySlug] = useState(null)
 
   const handleNavigate = (page, payload = null) => {
     setCurrentPage(page)
@@ -23,6 +26,10 @@ export default function App() {
       setSelectedArticleSlug(payload ?? ARTICLES[0]?.slug ?? null)
     } else if (page === 'articles') {
       setSelectedArticleSlug(null)
+    } else if (page === 'replay-detail') {
+      setSelectedReplaySlug(payload ?? REPLAYS[0]?.slug ?? null)
+    } else if (page === 'replays') {
+      setSelectedReplaySlug(null)
     }
     window.scrollTo(0, 0)
   }
@@ -44,7 +51,13 @@ export default function App() {
             onBack={() => handleNavigate('articles')}
           />
         )}
-        {currentPage === 'replays' && <Replays />}
+        {currentPage === 'replays' && <ReplaysList onNavigate={handleNavigate} />}
+        {currentPage === 'replay-detail' && selectedReplaySlug && (
+          <ReplayDetailPage
+            slug={selectedReplaySlug}
+            onBack={() => handleNavigate('replays')}
+          />
+        )}
         {currentPage === 'trainers' && <Trainers />}
       </main>
 
