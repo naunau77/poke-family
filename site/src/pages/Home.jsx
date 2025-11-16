@@ -1,5 +1,6 @@
 import { ARTICLES } from '../data/articles'
 import { POKEMONS } from '../data/pokemons'
+import { REPLAYS } from '../data/replays'
 import { getTypeHexColor } from '../utils/typeColors'
 import { getArticleArtwork } from '../utils/articleAssets'
 
@@ -8,14 +9,25 @@ const HERO_CHARACTER = '/images/naulynn-victoire.jpg'
 const HERO_SUPPORT = 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/923.png'
 
 const VIDEO_FEATURE = {
-  url: 'https://www.youtube.com/embed/1roy4o4tqQM',
+  url: 'https://www.youtube.com/embed/3pxvptLoreQ',
   title: 'Trailer officiel Pokémon Scarlet & Violet',
   caption: 'Revivez l’annonce officielle de Scarlet/Violet par la chaîne Pokémon : idéal pour se replonger dans l’ambiance compétitive.'
+}
+
+const toReplayLink = (videoUrl) => {
+  if (!videoUrl) return '#'
+  const marker = '/embed/'
+  if (videoUrl.includes(marker)) {
+    const [, id] = videoUrl.split(marker)
+    return `https://www.youtube.com/watch?v=${id}`
+  }
+  return videoUrl
 }
 
 export default function Home({ onNavigate }) {
   const featuredPokemon = [POKEMONS[3], POKEMONS[0], POKEMONS[2], POKEMONS[4], POKEMONS[1], POKEMONS[5]]
   const highlightedArticles = ARTICLES.slice(0, 3)
+  const highlightedReplays = REPLAYS.slice(0, 6)
 
   return (
     <>
@@ -85,7 +97,6 @@ export default function Home({ onNavigate }) {
               <p className="text-sm text-white/80">{VIDEO_FEATURE.caption}</p>
             </div>
           </div>
-
         </div>
       </section>
 
@@ -188,21 +199,20 @@ export default function Home({ onNavigate }) {
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-black mb-8">Replays commentés</h2>
           <div className="space-y-4">
-            {[
-              { title: 'VGC 2025 Finals — Stall vs Hyper Offense', date: '15 nov', duration: '38:45', category: 'Compétitif' },
-              { title: 'Guide : 6v6 Doubles Format', date: '10 nov', duration: '25:30', category: 'Tutoriel' },
-              { title: 'Pikachu Comp Sweep — Moments Forts', date: '5 nov', duration: '15:20', category: 'Fun' },
-              { title: 'Championnat Régional 2025 — Highlights', date: '1 nov', duration: '42:10', category: 'Compétitif' },
-              { title: 'Breeding Shiny : Techniques Avancées', date: '25 oct', duration: '20:15', category: 'Tutoriel' },
-              { title: 'Pokémon Paradox : Stratégies Modernes', date: '20 oct', duration: '35:50', category: 'Compétitif' }
-            ].map((replay) => (
-              <button
-                key={replay.title}
+            {highlightedReplays.map((replay) => (
+              <a
+                key={replay.slug}
+                href={toReplayLink(replay.videoUrl)}
+                target="_blank"
+                rel="noreferrer"
                 className="block bg-white border-l-4 border-pokemon-primary p-6 rounded-2xl hover:shadow-lg transition w-full text-left cursor-pointer"
               >
                 <h3 className="text-xl font-bold mb-1">{replay.title}</h3>
-                <p className="text-sm text-gray-600">{replay.date} • {replay.duration} • {replay.category}</p>
-              </button>
+                <p className="text-sm text-gray-600">
+                  {replay.date} • {replay.duration} • {replay.category}
+                </p>
+                <p className="text-xs text-gray-500 italic">{replay.platform} • Visionner</p>
+              </a>
             ))}
           </div>
           <div className="text-center mt-8">

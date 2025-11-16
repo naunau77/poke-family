@@ -1,5 +1,15 @@
 import { REPLAYS } from '../data/replays'
 
+const toWatchUrl = (videoUrl) => {
+  if (!videoUrl) return '#'
+  const marker = '/embed/'
+  if (videoUrl.includes(marker)) {
+    const [, id] = videoUrl.split(marker)
+    return `https://www.youtube.com/watch?v=${id}`
+  }
+  return videoUrl
+}
+
 function ReplaySection({ section, slug }) {
   return (
     <div className="space-y-2" key={`${slug}-${section.heading}`}>
@@ -101,14 +111,26 @@ export default function Replays() {
                 </div>
 
                 <div className="bg-gray-900/90 flex items-center justify-center p-4">
-                  <div className="w-full h-full aspect-video rounded-2xl overflow-hidden shadow-2xl">
-                    <iframe
-                      title={replay.title}
-                      src={replay.videoUrl}
-                      allowFullScreen
-                      loading="lazy"
-                      className="w-full h-full border-0"
-                    ></iframe>
+                  <div className="w-full space-y-4">
+                    <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl">
+                      <iframe
+                        title={replay.title}
+                        src={replay.videoUrl}
+                        allowFullScreen
+                        loading="lazy"
+                        className="w-full h-full border-0"
+                      ></iframe>
+                    </div>
+                    <div className="text-center">
+                      <a
+                        href={toWatchUrl(replay.videoUrl)}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-white text-gray-900 font-semibold hover:-translate-y-0.5 transition"
+                      >
+                        Ouvrir sur YouTube →
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
