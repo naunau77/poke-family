@@ -68,7 +68,7 @@ function ReplayPreviewCard({ replay, onNavigate }) {
 export default function ReplaysList({ onNavigate }) {
   return (
     <section
-      className="relative py-16 overflow-hidden"
+      className="relative py-12 sm:py-16 overflow-hidden"
       style={{ background: 'radial-gradient(circle at top, #020617 0%, #0f172a 55%, #111827 100%)' }}
     >
       <div className="absolute inset-0 opacity-20">

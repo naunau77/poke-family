@@ -55,19 +55,19 @@ export default function Home({ onNavigate }) {
 
   return (
     <>
-      <section className="relative py-20 overflow-hidden text-white">
+      <section className="relative py-16 lg:py-20 overflow-hidden text-white">
         <div className="absolute inset-0">
           <img src={HERO_BACKGROUND} alt="Fond Pokémon" className="w-full h-full object-cover" loading="lazy" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#050816]/95 via-[#0b1234]/80 to-transparent"></div>
         </div>
-        <div className="container mx-auto px-4 relative z-10 grid lg:grid-cols-[1.2fr,0.8fr] gap-12 items-center">
-          <div className="space-y-6">
+        <div className="container mx-auto px-4 relative z-10 grid gap-10 items-center lg:grid-cols-[1.2fr,0.8fr]">
+          <div className="space-y-6 text-center lg:text-left">
             <p className="text-xs uppercase tracking-[0.4em] text-white/70">Lognes Battle Network</p>
-            <h1 className="text-5xl md:text-6xl font-black leading-tight">Naulynn vous guide à travers l’univers Pokémon</h1>
-            <p className="text-lg text-white/80 max-w-2xl">
+            <h1 className="text-4xl md:text-6xl font-black leading-tight">Naulynn vous guide à travers l’univers Pokémon</h1>
+            <p className="text-lg text-white/80 max-w-2xl mx-auto lg:mx-0">
               Guides compétitifs, Pokédex narratif, replays commentés et récits épiques inspirés des jeux et mangas officiels. Prépare ton équipe et rejoins la garde de Lognes.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
               <button
                 onClick={() => onNavigate('pokedex')}
                 className="px-8 py-3 rounded-full font-semibold text-gray-900 bg-pokemon-electric shadow-lg hover:-translate-y-0.5 transition cursor-pointer"
@@ -81,7 +81,7 @@ export default function Home({ onNavigate }) {
                 Lire les Guides
               </button>
             </div>
-            <div className="grid grid-cols-3 gap-4 text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
               {[{ label: 'Guides', value: ARTICLES.length }, { label: 'Pokémon', value: POKEMONS.length }, { label: 'Replays', value: 6 }].map((stat) => (
                 <div key={stat.label} className="bg-white/10 rounded-2xl p-4 border border-white/20">
                   <p className="text-3xl font-black">{stat.value}</p>
@@ -102,7 +102,7 @@ export default function Home({ onNavigate }) {
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="py-12 sm:py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-black mb-8 text-pokemon-primary">Replay en vedette</h2>
           <div className="relative max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-white/40">
@@ -119,7 +119,7 @@ export default function Home({ onNavigate }) {
                 Votre navigateur ne supporte pas la lecture vidéo intégrée.
               </video>
             </div>
-            <div className="absolute bottom-0 left-0 right-0 p-6 text-left text-white">
+            <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 text-left text-white">
               <h3 className="text-2xl font-black">{VIDEO_FEATURE.title}</h3>
               <p className="text-sm text-white/80">{VIDEO_FEATURE.caption}</p>
             </div>
@@ -127,7 +127,7 @@ export default function Home({ onNavigate }) {
         </div>
       </section>
 
-      <section className="py-16 bg-gradient-to-b from-white to-pokemon-primary/10">
+      <section className="py-12 sm:py-16 bg-gradient-to-b from-white to-pokemon-primary/10">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between mb-6 flex-wrap gap-4">
             <h2 className="text-4xl font-black text-pokemon-primary">Articles récents</h2>
@@ -172,7 +172,7 @@ export default function Home({ onNavigate }) {
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="py-12 sm:py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-black mb-8">Pokédex en vedette</h2>
           <div className="grid grid-cols-2 md:grid-cols-6 gap-4 mb-8">
@@ -222,7 +222,7 @@ export default function Home({ onNavigate }) {
         </div>
       </section>
 
-      <section className="py-16 bg-gray-50">
+      <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-black mb-8">Replays commentés</h2>
           <div className="space-y-4">

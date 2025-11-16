@@ -37,15 +37,15 @@ export default function Trainers() {
   const naulynnSignatures = buildSignatureEntries(naulynn)
 
   return (
-    <section className="py-16 bg-gradient-to-b from-white to-gray-100">
-      <div className="container mx-auto px-4 space-y-16">
+    <section className="py-12 sm:py-16 bg-gradient-to-b from-white to-gray-100">
+      <div className="container mx-auto px-4 space-y-14">
         {/* Hero Section */}
-        <header className="text-center">
+        <header className="text-center px-2">
           <p className="uppercase tracking-widest text-sm font-semibold text-pokemon-electric mb-2">
             Alliances & Mentors
           </p>
-          <h1 className="text-5xl font-black text-pokemon-primary mb-4">Dresseurs emblématiques</h1>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <h1 className="text-4xl font-black text-pokemon-primary mb-4 sm:text-5xl">Dresseurs emblématiques</h1>
+          <p className="text-base text-gray-600 max-w-3xl mx-auto sm:text-lg">
             Découvrez Naulynn, 17 ans, et les dresseurs légendaires qui l'accompagnent dans sa quête pour devenir
             Maîtresse des dresseurs. Chaque profil détaille forces, faiblesses, relations et quêtes majeures.
           </p>
@@ -55,7 +55,7 @@ export default function Trainers() {
         {naulynn && (
           <article className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-pokemon-primary/20">
             <div className="md:flex">
-              <div className="md:w-2/3 p-8 space-y-6">
+              <div className="md:w-2/3 p-6 space-y-6 sm:p-8">
                 <div>
                   <p className="uppercase text-xs tracking-widest text-gray-500 mb-2">Profil principal</p>
                   <h2 className="text-4xl font-black text-pokemon-primary mb-2">{naulynn.name}</h2>
@@ -129,7 +129,7 @@ export default function Trainers() {
                   </div>
                 </div>
               </div>
-              <div className="md:w-1/3 bg-gradient-to-b from-pokemon-primary to-pokemon-accent text-white p-8 space-y-6">
+              <div className="md:w-1/3 bg-gradient-to-b from-pokemon-primary to-pokemon-accent text-white p-6 space-y-6 sm:p-8">
                 <div className="rounded-3xl overflow-hidden border border-white/30 shadow-2xl">
                   <div className="aspect-video bg-black w-full">
                     <video

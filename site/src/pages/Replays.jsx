@@ -82,11 +82,11 @@ export default function ReplayDetailPage({ slug, onBack }) {
           loading="lazy"
         />
       </div>
-      <div className="container mx-auto px-4 relative z-10 space-y-10 text-white">
-        <div className="flex items-center justify-between gap-4 flex-wrap">
+      <div className="container mx-auto px-4 relative z-10 space-y-8 text-white">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <p className="text-xs uppercase tracking-[0.4em] text-white/60">Lognes Replay Hub</p>
-            <h1 className="text-4xl font-black">{replay.title}</h1>
+            <h1 className="text-3xl font-black sm:text-4xl">{replay.title}</h1>
             <p className="text-sm text-white/80">
               {replay.author} • {replay.date} • {replay.duration} • {replay.platform}
             </p>
@@ -100,7 +100,7 @@ export default function ReplayDetailPage({ slug, onBack }) {
         </div>
 
         <article className="bg-white/95 backdrop-blur rounded-3xl shadow-2xl border border-white/60 text-gray-900 overflow-hidden">
-          <div className="grid lg:grid-cols-[1.15fr,0.85fr] gap-10 p-8">
+          <div className="grid gap-8 p-5 sm:p-8 lg:grid-cols-[1.15fr,0.85fr] lg:gap-10">
             <div className="space-y-6">
               {replay.coverImage && (
                 <figure className="rounded-3xl overflow-hidden shadow-xl border border-gray-100">
