@@ -5,6 +5,7 @@ export const TRAINERS = [
     title: 'Exploratrice de Lognes',
     age: 17,
     hometown: 'Lognes (Île-de-France)',
+    image: '/images/naulynn-dresseuse.jpg',
     dream: 'Devenir Maîtresse des dresseurs tout en protégeant les sanctuaires Pokémon',
     signaturePokemon: ['Pikachu', 'Florizarre', 'Dracaufeu', 'Tortank', 'Raichu d\'Alola', 'Grodoudou'],
     biography: `Naulynn a grandi à Lognes en observant les voyageurs du RER transporter leurs Pokémon. 

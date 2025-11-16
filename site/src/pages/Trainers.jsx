@@ -14,7 +14,7 @@ export default function Trainers() {
           </p>
           <h1 className="text-5xl font-black text-pokemon-primary mb-4">Dresseurs emblématiques</h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Découvrez Naulynn, 17 ans, et les dresseurs légendaires qui l\'accompagnent dans sa quête pour devenir
+            Découvrez Naulynn, 17 ans, et les dresseurs légendaires qui l'accompagnent dans sa quête pour devenir
             Maîtresse des dresseurs. Chaque profil détaille forces, faiblesses, relations et quêtes majeures.
           </p>
         </header>
@@ -80,6 +80,22 @@ export default function Trainers() {
                 </div>
               </div>
               <div className="md:w-1/3 bg-gradient-to-b from-pokemon-primary to-pokemon-accent text-white p-8 space-y-6">
+                {naulynn.image && (
+                  <div className="rounded-3xl overflow-hidden border border-white/30 shadow-2xl">
+                    <img
+                      src={naulynn.image}
+                      alt={`Illustration de ${naulynn.name}`}
+                      className="w-full h-72 object-cover"
+                      loading="lazy"
+                      onError={(event) => {
+                        event.currentTarget.style.display = 'none'
+                      }}
+                    />
+                    <p className="text-xs uppercase tracking-[0.3em] text-white/70 px-4 py-2 bg-black/30">
+                      Légende : Naulynn & Pikachu
+                    </p>
+                  </div>
+                )}
                 <div>
                   <p className="uppercase text-xs tracking-widest mb-2 text-white/70">Rêve</p>
                   <p className="text-2xl font-black">{naulynn.dream}</p>

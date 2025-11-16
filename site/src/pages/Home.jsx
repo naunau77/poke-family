@@ -4,13 +4,13 @@ import { getTypeHexColor } from '../utils/typeColors'
 import { getArticleArtwork } from '../utils/articleAssets'
 
 const HERO_BACKGROUND = 'https://assets.pokemon.com/assets/cms2/img/misc/virtual-backgrounds/pokemon-masters/pokemon-masters-06.jpg'
-const HERO_CHARACTER = 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png'
-const HERO_SUPPORT = 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png'
+const HERO_CHARACTER = '/images/naulynn-victoire.jpg'
+const HERO_SUPPORT = 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/923.png'
 
 const VIDEO_FEATURE = {
   url: 'https://www.youtube.com/embed/1roy4o4tqQM',
-  title: 'Trailer officiel Pokémon Sword & Shield',
-  caption: 'L’aventure de Galar, par la chaîne officielle Pokémon — immersion garantie dans l’univers compétitif.'
+  title: 'Trailer officiel Pokémon Scarlet & Violet',
+  caption: 'Revivez l’annonce officielle de Scarlet/Violet par la chaîne Pokémon : idéal pour se replonger dans l’ambiance compétitive.'
 }
 
 export default function Home({ onNavigate }) {
@@ -59,8 +59,8 @@ export default function Home({ onNavigate }) {
             <div className="absolute -bottom-6 -left-10 w-40 h-40 rounded-full bg-pokemon-electric opacity-40 blur-3xl"></div>
             <div className="relative bg-white/10 border border-white/20 rounded-3xl p-6 backdrop-blur-xl shadow-2xl">
               <img src={HERO_CHARACTER} alt="Pikachu" className="w-72 mx-auto drop-shadow-2xl" loading="lazy" />
-              <img src={HERO_SUPPORT} alt="Dracaufeu" className="w-40 absolute -top-10 -right-6 drop-shadow-2xl opacity-80" loading="lazy" />
-              <p className="text-center text-sm text-white/80 mt-4">Naulynn & Pikachu vous attendent sur le front.</p>
+              <img src={HERO_SUPPORT} alt="Pohmarmotte" className="w-40 absolute -top-10 -right-6 drop-shadow-2xl opacity-80" loading="lazy" />
+              <p className="text-center text-sm text-white/80 mt-4">Naulynn & Pohmarmotte vous attendent sur le front.</p>
             </div>
           </div>
         </div>
@@ -70,7 +70,7 @@ export default function Home({ onNavigate }) {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-black mb-8 text-pokemon-primary">Replay en vedette</h2>
           <div className="relative max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-white/40">
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent pointer-events-none"></div>
             <div className="aspect-video">
               <iframe
                 src={VIDEO_FEATURE.url}
@@ -85,6 +85,7 @@ export default function Home({ onNavigate }) {
               <p className="text-sm text-white/80">{VIDEO_FEATURE.caption}</p>
             </div>
           </div>
+
         </div>
       </section>
 
