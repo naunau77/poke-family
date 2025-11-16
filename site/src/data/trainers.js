@@ -8,6 +8,14 @@ export const TRAINERS = [
     image: '/images/naulynn-dresseuse.jpg',
     dream: 'Devenir Maîtresse des dresseurs tout en protégeant les sanctuaires Pokémon',
     signaturePokemon: ['Pikachu', 'Florizarre', 'Dracaufeu', 'Tortank', 'Raichu d\'Alola', 'Grodoudou'],
+    signaturePokemonDetails: [
+      { name: 'Pikachu', image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png' },
+      { name: 'Florizarre', image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png' },
+      { name: 'Dracaufeu', image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png' },
+      { name: 'Tortank', image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png' },
+      { name: 'Raichu d\'Alola', image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/26.png' },
+      { name: 'Grodoudou', image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/40.png' }
+    ],
     biography: `Naulynn a grandi à Lognes en observant les voyageurs du RER transporter leurs Pokémon. 
 Elle a rapidement rejoint le cercle d'amis de Sacha et s'est spécialisée dans les missions de terrain
 qui mêlent aide humanitaire et recherche de Pokémon rares.`,
@@ -46,8 +54,14 @@ qui mêlent aide humanitaire et recherche de Pokémon rares.`,
     title: 'Défi Nomade',
     age: 20,
     hometown: 'Bourg Palette',
+    image: 'https://assets.pokemon.com/assets/cms2/img/watch-pokemon-tv/seasons/season25/season25_ep01_ss04.jpg',
     dream: 'Visiter toutes les ligues et consolider un réseau mondial de dresseurs',
     signaturePokemon: ['Pikachu', 'Dracaufeu', 'Greninja'],
+    signaturePokemonDetails: [
+      { name: 'Pikachu', image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png' },
+      { name: 'Dracaufeu', image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png' },
+      { name: 'Greninja', image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/658.png' }
+    ],
     biography: `Sacha continue d'explorer le monde avec un œil mentor pour les jeunes talents. 
 Il sert de grand frère à Naulynn, partage ses carnets de badges et a coordonné le raid contre la Team Plasma 2.0 lorsque les légendaires ont été capturés.`,
     strengths: [
@@ -77,8 +91,14 @@ Il sert de grand frère à Naulynn, partage ses carnets de badges et a coordonn�
     title: 'Gardienne des mers',
     age: 19,
     hometown: 'Azuria',
+    image: 'https://assets.pokemon.com/assets/cms2/img/watch-pokemon-tv/seasons/season01/season01_ep07_ss03.jpg',
     dream: 'Moderniser les infrastructures aquatiques pour les dresseurs voyageurs',
     signaturePokemon: ['Lokhlass', 'Starmie', 'Psykokwak'],
+    signaturePokemonDetails: [
+      { name: 'Lokhlass', image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/131.png' },
+      { name: 'Starmie', image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/121.png' },
+      { name: 'Psykokwak', image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/54.png' }
+    ],
     biography: `Ondine dirige le Centre Aquatique d'Azuria tout en aidant Naulynn à sécuriser les voies maritimes. 
 Elle conçoit des protocoles pour les transports médicaux par voie d'eau et a dirigé l'évacuation sous-marine pour libérer Lugia.`,
     strengths: [
@@ -108,8 +128,14 @@ Elle conçoit des protocoles pour les transports médicaux par voie d'eau et a d
     title: 'Médecin itinérant',
     age: 21,
     hometown: 'Argenta',
+    image: 'https://assets.pokemon.com/assets/cms2/img/watch-pokemon-tv/seasons/season01/season01_ep05_ss01.jpg',
     dream: 'Établir des cliniques mobiles Pokémon',
     signaturePokemon: ['Onix', 'Steelix', 'Blissey'],
+    signaturePokemonDetails: [
+      { name: 'Onix', image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/95.png' },
+      { name: 'Steelix', image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/208.png' },
+      { name: 'Blissey', image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/242.png' }
+    ],
     biography: `Pierre a converti son expertise de champion Roche en un rôle de soigneur itinérant.
 Il aide Naulynn à maintenir en forme ses partenaires durant leurs missions de secours.`,
     strengths: [
@@ -138,8 +164,14 @@ Il aide Naulynn à maintenir en forme ses partenaires durant leurs missions de s
     title: 'Scénographe des concours',
     age: 19,
     hometown: 'Bourg Croquis',
+    image: 'https://assets.pokemon.com/assets/cms2/img/watch-pokemon-tv/seasons/season17/season17_ep40_ss02.jpg',
     dream: 'Fusionner concours, musique et compétitions Pokémon',
     signaturePokemon: ['Feunnec', 'Pancham', 'Sylveon'],
+    signaturePokemonDetails: [
+      { name: 'Feunnec', image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/653.png' },
+      { name: 'Pancham', image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/674.png' },
+      { name: 'Sylveon', image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/700.png' }
+    ],
     biography: `Serena coordonne les festivals où Naulynn présente ses replays.
 Elle conçoit des chorégraphies qui valorisent Grodoudou et Pikachu et a dirigé la diversion scénique qui a permis de libérer Ho-Oh.`,
     strengths: [
@@ -169,8 +201,14 @@ Elle conçoit des chorégraphies qui valorisent Grodoudou et Pikachu et a dirig�
     title: 'Maîtresse de Sinnoh',
     age: 25,
     hometown: 'Celestia',
+    image: 'https://assets.pokemon.com/assets/cms2/img/video-games/_tiles/pokemon-scarlet-violet/characters/cynthia-169.png',
     dream: 'Transmettre la connaissance des mythes et ruines aux futurs champions',
     signaturePokemon: ['Carchacrok', 'Lucario', 'Togekiss'],
+    signaturePokemonDetails: [
+      { name: 'Carchacrok', image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/445.png' },
+      { name: 'Lucario', image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/448.png' },
+      { name: 'Togekiss', image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/468.png' }
+    ],
     biography: `Cynthia parraine les recherches de Naulynn sur les lignes ley. 
 Elle prête ses archives et son Lucario pour entraîner Abra et Alakazam, et a fourni les coordonnées historiques permettant de localiser Suicune et les sanctuaires de Lugia/Ho-Oh.`,
     strengths: [
@@ -200,8 +238,14 @@ Elle prête ses archives et son Lucario pour entraîner Abra et Alakazam, et a f
     title: 'Champion invaincu de Galar',
     age: 23,
     hometown: 'Puralis',
+    image: 'https://assets.pokemon.com/assets/cms2/img/video-games/video-games/pokemon_sword_shield/art/leon.png',
     dream: 'Former une génération de pilotes de dragons capables d\'assurer des secours aériens',
     signaturePokemon: ['Dracaufeu', 'Dragapult', 'Dorlodon'],
+    signaturePokemonDetails: [
+      { name: 'Dracaufeu', image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png' },
+      { name: 'Dragapult', image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/887.png' },
+      { name: 'Dorlodon', image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/884.png' }
+    ],
     biography: `Leon sert de sparring partner à Naulynn et supervise ses sessions d'entraînement aérien à Hammerlocke. 
 Il partage ses méthodes de planification de vols humanitaires et a supervisé l'escorte aérienne de l'Opération Arceus pour empêcher la Team Plasma 2.0 de transférer les légendaires.`,
     strengths: [

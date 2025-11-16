@@ -1,8 +1,40 @@
 import { TRAINERS } from '../data/trainers'
 
+const buildSignatureEntries = (trainer) => {
+  if (!trainer) return []
+  if (trainer.signaturePokemonDetails?.length) {
+    return trainer.signaturePokemonDetails
+  }
+  return (trainer.signaturePokemon || []).map((name) => ({ name }))
+}
+
+const SignatureChips = ({ entries, light }) => (
+  <div className="flex flex-wrap gap-2">
+    {entries.map((entry) => (
+      <span
+        key={entry.name}
+        className={`inline-flex items-center gap-2 px-3 py-2 rounded-full text-sm font-semibold border ${
+          light ? 'bg-white/10 border-white/30 text-white' : 'bg-gray-50 border-gray-200 text-gray-800'
+        }`}
+      >
+        {entry.image && (
+          <img
+            src={entry.image}
+            alt={entry.name}
+            className="w-8 h-8 object-contain rounded-full bg-white"
+            loading="lazy"
+          />
+        )}
+        <span>{entry.name}</span>
+      </span>
+    ))}
+  </div>
+)
+
 export default function Trainers() {
   const naulynn = TRAINERS.find((trainer) => trainer.id === 'naulynn')
   const otherTrainers = TRAINERS.filter((trainer) => trainer.id !== 'naulynn')
+  const naulynnSignatures = buildSignatureEntries(naulynn)
 
   return (
     <section className="py-16 bg-gradient-to-b from-white to-gray-100">
@@ -119,11 +151,7 @@ export default function Trainers() {
                 </div>
                 <div>
                   <p className="uppercase text-xs tracking-widest mb-2 text-white/70">Équipe signature</p>
-                  <ul className="space-y-1 text-white/90">
-                    {naulynn.signaturePokemon.map((pokemon) => (
-                      <li key={pokemon}>• {pokemon}</li>
-                    ))}
-                  </ul>
+                  <SignatureChips entries={naulynnSignatures} light />
                 </div>
               </div>
             </div>
@@ -144,6 +172,14 @@ export default function Trainers() {
                 key={trainer.id}
                 className="bg-white border border-gray-200 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition"
               >
+                {trainer.image && (
+                  <img
+                    src={trainer.image}
+                    alt={`Portrait de ${trainer.name}`}
+                    className="w-full h-48 object-cover rounded-2xl mb-4"
+                    loading="lazy"
+                  />
+                )}
                 <div className="flex items-center justify-between mb-3">
                   <div>
                     <p className="text-xs uppercase tracking-widest text-gray-400">{trainer.title}</p>
@@ -155,6 +191,10 @@ export default function Trainers() {
                 <p className="text-gray-700 text-sm leading-relaxed whitespace-pre-line mb-4">
                   {trainer.biography}
                 </p>
+                <div className="mb-4">
+                  <p className="font-semibold text-pokemon-primary mb-2">Pokémon signature</p>
+                  <SignatureChips entries={buildSignatureEntries(trainer)} />
+                </div>
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div>
                     <p className="font-semibold text-pokemon-primary mb-2">Forces</p>
