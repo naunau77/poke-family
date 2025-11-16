@@ -119,7 +119,7 @@ export default function Home({ onNavigate }) {
                 Votre navigateur ne supporte pas la lecture vidéo intégrée.
               </video>
             </div>
-            <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 text-left text-white">
+            <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 text-left text-white pointer-events-none">
               <h3 className="text-2xl font-black">{VIDEO_FEATURE.title}</h3>
               <p className="text-sm text-white/80">{VIDEO_FEATURE.caption}</p>
             </div>
